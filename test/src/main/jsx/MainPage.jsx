@@ -1,14 +1,13 @@
-import '../webapp/css/custom.css';
- 
-import React from 'react';
-import ReactDOM from 'react-dom';
- 
+import React from "react";
+import ReactDom from "react-dom";
+
+import { Button } from "grommet";
+
 class MainPage extends React.Component {
- 
-    render() {
-        return <div className="main">메인 페이지</div>;
-    }
- 
+  render() {
+    return <Button label="Edit" onClick={() => {}} />;
+    //<div className="main">no4gift 메인 페이지</div>;
+  }
 }
- 
-ReactDOM.render(<MainPage/>, document.getElementById('root'));
+
+ReactDom.render(<MainPage />, document.getElementById("root"));
