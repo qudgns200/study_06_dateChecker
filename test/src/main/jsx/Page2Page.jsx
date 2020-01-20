@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDom from "react-dom";
-
-import { Button } from "grommet";
+import Button from '@material-ui/core/Button';
 
 class Page2Page extends React.Component {
   render() {
     return (
       <header className="page2">
-        <Button label="Page2" onClick={() => {}} />
+        <Button variant="contained" color="primary">
+          Hello!!
+        </Button>
       </header>
     );
-    //<div className="main">no4gift 메인 페이지</div>;
   }
 }
 
