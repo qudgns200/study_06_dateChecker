@@ -6,9 +6,14 @@ class Page1Page extends React.Component {
   render() {
     return (
       <div className="page1">
-        <Button variant="contained" color="inherit">
-          Hello!!
-        </Button>
+        <div>
+          <Button variant="contained" color="inherit">
+            Hello!!
+          </Button>
+        </div>
+        <div>
+          
+        </div>
       </div>
     );
   }
