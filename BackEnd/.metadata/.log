@@ -44,3 +44,346 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2020-01-24 20:19:26.247 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=13.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-01-24 20:19:37.001
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-24 20:19:37.001
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2105c11b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@99e68b5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-01-24 20:19:47.493
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Gift_no1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2020-01-24 20:28:00.701 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=13.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data file:/D:/02_Dev/study_06_dateChecker/BackEnd/ -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-01-24 20:28:08.456
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-01-24 20:28:08.456
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@770d65c2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@44acce5d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-01-24 20:28:19.053
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Gift_no1'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2020-01-24 20:34:47.226
+!MESSAGE Connection to https://download.eclipse.org/webtools/downloads/drops/R3.16.0/R-3.16.0-20191210070716/repository/plugins/org.eclipse.wst.wsi.ui_1.1.0.v201910301957.jar.pack.gz failed on download.eclipse.org:443 failed to respond. Retry attempt 0 started
+!STACK 0
+org.apache.http.NoHttpResponseException: download.eclipse.org:443 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:141)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:163)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:165)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1000)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:992)
+	at org.eclipse.ecf.provider.filetransfer.httpclient45.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:988)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2020-01-24 20:34:51.455
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2020-01-24 20:34:51.455
+!MESSAGE session context was:(profile=C__Users_Gift_no1_eclipse_jee-2019-09_eclipse, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,com.vmware.vfabric.ide.eclipse.tcserver.core,3.9.12.202001061003-CI-B132
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,com.vmware.vfabric.ide.eclipse.tcserver.livegraph,3.9.12.202001061003-CI-B132
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,com.vmware.vfabric.ide.eclipse.tcserver.reloading,3.9.12.202001061003-CI-B132
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,com.vmware.vfabric.ide.eclipse.tcserver.ui,3.9.12.202001061003-CI-B132
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.aspectj.ajde,1.9.2.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.aspectj.runtime,1.9.2.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.aspectj.weaver,1.9.2.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ajdt.core,2.2.4.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ajdt.doc.user,2.2.4.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ajdt.examples,2.2.4.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ajdt.ui,2.2.4.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.aspectj,2.2.4.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.contribution.visualiser,2.2.4.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.contribution.weaving.jdt,2.2.4.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.contribution.xref.core,2.2.4.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.contribution.xref.ui,2.2.4.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.weaving.aspectj,1.0.400.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.archetype.common,1.14.0.20191209-1923
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.binaryproject,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.binaryproject.ui,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core.ui,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.discovery,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor.xml,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.importer,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt.ui,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.launching,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.lifecyclemapping.defaults,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.logback.appender,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.logback.configuration,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.indexer,1.14.0.20191209-1923
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime,1.14.0.20191209-1923
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime.slf4j.simple,1.14.0.20191209-1923
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.model.edit,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.core,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.ui,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.refactoring,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.scm,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.sourcelookup,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.sourcelookup.ui,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.wtp.jpa,1.4.3.20191209-1849
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.ajdt.ui.visualiser,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.ajdt.ui.xref,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.aop.core,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.aop.mylyn,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.aop.ui,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.aop.ui.matcher,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.batch,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.core,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.core.autowire,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.core.metadata,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.mylyn,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.autowire,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.editor,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.graph,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.livegraph,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.refactoring,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.search,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.bestpractices,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.config.core,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.config.graph,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.config.ui,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.core,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.data.core,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.doc,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.integration,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.maven,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.metadata,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.mylyn,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.quickfix,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.security,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.ui,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.webflow.core,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.webflow.mylyn,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.webflow.ui,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.webflow.ui.editor,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.webflow.ui.graph,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.wizard,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.xml.namespaces.manager,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.browser,3.9.12.202001132314-CI-B489
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.configurator,3.9.12.202001132314-CI-B489
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.content.core,3.9.12.202001132314-CI-B489
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.gettingstarted,3.9.12.202001132314-CI-B489
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.dashboard.ui,3.9.12.202001132314-CI-B489
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,com.vmware.vfabric.ide.eclipse.tcserver,3.9.12.202001061003-CI-B132
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.aspectj,1.9.2.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.ajdt,2.2.4.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.contribution.weaving,2.2.4.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.contribution.xref,2.2.4.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.equinox.weaving.sdk,1.2.0.201911072000
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.feature,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.logback.feature,1.14.0.20191209-1925
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.wtp.jpa.feature,1.4.3.20191209-1849
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.ajdt.feature,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.aop.feature,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.autowire.feature,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.batch.feature,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.data.feature,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.feature,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.integration.feature,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.maven.feature,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.mylyn.feature,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.security.feature,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.webflow.feature,3.9.12.202001201914-CI-B2372
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-01-24 20:34:51.455
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springsource.ide.eclipse.dashboard,3.9.12.202001132314-CI-B489
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-01-24 20:53:36.069
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-01-24 20:53:47.803
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-01-24 20:53:47.814
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-01-24 20:53:48.343
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-01-24 20:53:48.352
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-01-24 20:53:50.518
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-01-24 20:53:50.522
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-01-24 20:54:20.779
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-01-24 20:54:20.781
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
