@@ -1,9 +1,9 @@
-package com.example.demo.model;
+package com.qudgns200.model;
 
 public class User {
+
 	private int no;
 	private String name;
-	
 	public int getNo() {
 		return no;
 	}
