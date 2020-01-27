@@ -1,14 +1,11 @@
 package com.qudgns200;
 
 import java.sql.Connection;
-
 import javax.sql.DataSource;
-
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
 import com.qudgns200.mapper.UserMapper;
 import com.qudgns200.model.User;
 
@@ -44,12 +41,7 @@ class DatecheckerApplicationTests {
 //	}
 	
 	@Test
-	public void testSQL() throws Exception {
-		User user = new User();
-		user.setNo(3);
-		user.setName("LEE");
-		uMapper.create(user);
-		
+	public void testSQL() throws Exception {		
 		System.out.println(uMapper.read(3).toString());
 	}
 

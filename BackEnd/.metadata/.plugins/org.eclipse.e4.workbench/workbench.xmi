@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_w698UT92EeqIOtEbw7bNvg" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_w698Uj92EeqIOtEbw7bNvg" bindingContexts="_w698Wz92EeqIOtEbw7bNvg">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;DatecheckerApplicationTests.java&quot; tooltip=&quot;datechecker/src/test/java/com/qudgns200/DatecheckerApplicationTests.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/src/test/java/com/qudgns200/DatecheckerApplicationTests.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;DatecheckerApplication.java&quot; tooltip=&quot;datechecker/src/main/java/com/qudgns200/DatecheckerApplication.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/src/main/java/com/qudgns200/DatecheckerApplication.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserMapper.java&quot; tooltip=&quot;datechecker/src/test/java/com/qudgns200/mapper/UserMapper.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/src/test/java/com/qudgns200/mapper/UserMapper.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;User.java&quot; tooltip=&quot;datechecker/src/test/java/com/qudgns200/model/User.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/src/test/java/com/qudgns200/model/User.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.m2e.editor.MavenPomEditor&quot; name=&quot;pom.xml&quot; tooltip=&quot;datechecker/pom.xml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/pom.xml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;SpringBootPropertyEditor&quot; name=&quot;application.properties&quot; tooltip=&quot;datechecker/src/main/resources/application.properties&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/src/main/resources/application.properties&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;HelloController.java&quot; tooltip=&quot;datechecker/src/main/java/com/qudgns200/controller/HelloController.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/src/main/java/com/qudgns200/controller/HelloController.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;User.java&quot; tooltip=&quot;datechecker/src/main/java/com/qudgns200/model/User.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/src/main/java/com/qudgns200/model/User.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserMapper.java&quot; tooltip=&quot;datechecker/src/main/java/com/qudgns200/mapper/UserMapper.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/src/main/java/com/qudgns200/mapper/UserMapper.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart&quot; name=&quot;userMapper.xml&quot; tooltip=&quot;datechecker/src/main/resources/mappers/userMapper.xml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/src/main/resources/mappers/userMapper.xml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;SpringBootPropertyEditor&quot; name=&quot;application.properties&quot; tooltip=&quot;datechecker/src/main/resources/application.properties&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/src/main/resources/application.properties&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;DatecheckerApplicationTests.java&quot; tooltip=&quot;datechecker/src/test/java/com/qudgns200/DatecheckerApplicationTests.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/src/test/java/com/qudgns200/DatecheckerApplicationTests.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;DatecheckerApplication.java&quot; tooltip=&quot;datechecker/src/main/java/com/qudgns200/DatecheckerApplication.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/src/main/java/com/qudgns200/DatecheckerApplication.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserMapper.java&quot; tooltip=&quot;datechecker/src/test/java/com/qudgns200/mapper/UserMapper.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/src/test/java/com/qudgns200/mapper/UserMapper.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;User.java&quot; tooltip=&quot;datechecker/src/test/java/com/qudgns200/model/User.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/src/test/java/com/qudgns200/model/User.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.m2e.editor.MavenPomEditor&quot; name=&quot;pom.xml&quot; tooltip=&quot;datechecker/pom.xml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/pom.xml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;HelloController.java&quot; tooltip=&quot;datechecker/src/main/java/com/qudgns200/controller/HelloController.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/datechecker/src/main/java/com/qudgns200/controller/HelloController.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>ModelMigrationProcessor.001</tags>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_w698Uj92EeqIOtEbw7bNvg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_xMme4j92EeqIOtEbw7bNvg" label="%trimmedwindow.label.eclipseSDK" x="182" y="182" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_w698Uj92EeqIOtEbw7bNvg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_xMme4j92EeqIOtEbw7bNvg" label="%trimmedwindow.label.eclipseSDK" x="38" y="21" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -11,7 +11,6 @@
     <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1579959002540"/>
     <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;show_in_time/>"/>
     <tags>topLevel</tags>
-    <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_xMme4j92EeqIOtEbw7bNvg" selectedElement="_xMme4z92EeqIOtEbw7bNvg" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_xMme4z92EeqIOtEbw7bNvg" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_xV2hgD92EeqIOtEbw7bNvg">
         <children xsi:type="advanced:Perspective" xmi:id="_xV2hgD92EeqIOtEbw7bNvg" elementId="org.eclipse.jst.j2ee.J2EEPerspective" selectedElement="_xV2hgT92EeqIOtEbw7bNvg" label="Java EE" iconURI="platform:/plugin/org.eclipse.jst.j2ee.ui/icons/full/cview16/j2ee_perspective.gif">
@@ -91,7 +90,6 @@
           <tags>persp.perspSC:org.eclipse.ajdt.ui.visualiser.AspectVisualizationPerspective</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_xV2hgT92EeqIOtEbw7bNvg" selectedElement="_xV2hhz92EeqIOtEbw7bNvg" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_xV2hgj92EeqIOtEbw7bNvg" elementId="topLeft" containerData="2500" selectedElement="_xV2hgz92EeqIOtEbw7bNvg">
-              <tags>active</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_xV2hgz92EeqIOtEbw7bNvg" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_xSJGMD92EeqIOtEbw7bNvg" closeable="true">
                 <tags>View</tags>
                 <tags>categoryTag:General</tags>
@@ -109,7 +107,7 @@
                 <tags>categoryTag:Java Browsing</tags>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_xV2hhz92EeqIOtEbw7bNvg" containerData="7500" selectedElement="_xV2hjj92EeqIOtEbw7bNvg">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_xV2hhz92EeqIOtEbw7bNvg" containerData="7500" selectedElement="_xV2hiD92EeqIOtEbw7bNvg">
               <children xsi:type="basic:PartSashContainer" xmi:id="_xV2hiD92EeqIOtEbw7bNvg" containerData="7000" selectedElement="_xV2hiT92EeqIOtEbw7bNvg" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_xV2hiT92EeqIOtEbw7bNvg" elementId="org.eclipse.ui.editorss" containerData="7000" ref="_xSC_kD92EeqIOtEbw7bNvg"/>
                 <children xsi:type="basic:PartStack" xmi:id="_xV2hij92EeqIOtEbw7bNvg" elementId="topRight" containerData="3000" selectedElement="_xV2hiz92EeqIOtEbw7bNvg">
@@ -222,26 +220,35 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_xSC_kD92EeqIOtEbw7bNvg" elementId="org.eclipse.ui.editorss" selectedElement="_xSC_kT92EeqIOtEbw7bNvg">
-      <children xsi:type="basic:PartStack" xmi:id="_xSC_kT92EeqIOtEbw7bNvg" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_DNpXkD95EeqoB7jVlwjtQw">
+      <children xsi:type="basic:PartStack" xmi:id="_xSC_kT92EeqIOtEbw7bNvg" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_jSsTMED_EeqvxMCVzf8UXg">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <children xsi:type="basic:Part" xmi:id="_DNpXkD95EeqoB7jVlwjtQw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="DatecheckerApplicationTests.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;DatecheckerApplicationTests.java&quot; partName=&quot;DatecheckerApplicationTests.java&quot; title=&quot;DatecheckerApplicationTests.java&quot; tooltip=&quot;datechecker/src/test/java/com/qudgns200/DatecheckerApplicationTests.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/datechecker/src/test/java/com/qudgns200/DatecheckerApplicationTests.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1122&quot; selectionTopPixel=&quot;254&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-        </children>
+        <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_5h-cID97EeqoB7jVlwjtQw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="UserMapper.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserMapper.java&quot; partName=&quot;UserMapper.java&quot; title=&quot;UserMapper.java&quot; tooltip=&quot;datechecker/src/main/java/com/qudgns200/mapper/UserMapper.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/datechecker/src/main/java/com/qudgns200/mapper/UserMapper.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;363&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;UserMapper.java&quot; partName=&quot;UserMapper.java&quot; title=&quot;UserMapper.java&quot; tooltip=&quot;datechecker/src/main/java/com/qudgns200/mapper/UserMapper.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/datechecker/src/main/java/com/qudgns200/mapper/UserMapper.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;320&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
         </children>
-        <children xsi:type="basic:Part" xmi:id="_YhVQQD98EeqoB7jVlwjtQw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="DatecheckerApplication.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;DatecheckerApplication.java&quot; partName=&quot;DatecheckerApplication.java&quot; title=&quot;DatecheckerApplication.java&quot; tooltip=&quot;datechecker/src/main/java/com/qudgns200/DatecheckerApplication.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/datechecker/src/main/java/com/qudgns200/DatecheckerApplication.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;260&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_7Do1UED-EeqvxMCVzf8UXg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="userMapper.xml" iconURI="platform:/plugin/org.eclipse.wst.xml.ui/icons/xmldoc.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart&quot; name=&quot;userMapper.xml&quot; partName=&quot;userMapper.xml&quot; title=&quot;userMapper.xml&quot; tooltip=&quot;datechecker/src/main/resources/mappers/userMapper.xml&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/datechecker/src/main/resources/mappers/userMapper.xml&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;266&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>removeOnHide</tags>
+          <tags>org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_-r1rEED-EeqvxMCVzf8UXg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="DatecheckerApplicationTests.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;DatecheckerApplicationTests.java&quot; partName=&quot;DatecheckerApplicationTests.java&quot; title=&quot;DatecheckerApplicationTests.java&quot; tooltip=&quot;datechecker/src/test/java/com/qudgns200/DatecheckerApplicationTests.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/datechecker/src/test/java/com/qudgns200/DatecheckerApplicationTests.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;768&quot; selectionTopPixel=&quot;330&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_jSsTMED_EeqvxMCVzf8UXg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="application.properties" iconURI="platform:/plugin/org.springframework.tooling.boot.ls/icons/spring_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;SpringBootPropertyEditor&quot; name=&quot;application.properties&quot; partName=&quot;application.properties&quot; title=&quot;application.properties&quot; tooltip=&quot;datechecker/src/main/resources/application.properties&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/datechecker/src/main/resources/application.properties&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;330&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>removeOnHide</tags>
+          <tags>SpringBootPropertyEditor</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
         </children>
       </children>
     </sharedElements>
@@ -251,8 +258,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1579959002540&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xD;&#xA;&lt;lastRecentlyUsedFilters/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_xWokoD92EeqIOtEbw7bNvg" elementId="org.eclipse.ui.navigator.ProjectExplorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -423,7 +428,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xN6tgD92EeqIOtEbw7bNvg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_IXOV8D94EeqoB7jVlwjtQw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_w7XljD92EeqIOtEbw7bNvg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6YQygED9EeqvxMCVzf8UXg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_w7XljD92EeqIOtEbw7bNvg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xN6tgT92EeqIOtEbw7bNvg" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -448,7 +453,7 @@
       <children xsi:type="menu:ToolBar" xmi:id="_xt4nAD92EeqIOtEbw7bNvg" elementId="org.eclipse.search.searchActionSet">
         <tags>Draggable</tags>
       </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_WG2kID93EeqIOtEbw7bNvg" elementId="org.eclipse.ui.edit.text.actionSet.presentation">
+      <children xsi:type="menu:ToolBar" xmi:id="_WG2kID93EeqIOtEbw7bNvg" elementId="org.eclipse.ui.edit.text.actionSet.presentation" visible="false">
         <tags>Draggable</tags>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xtdJMD92EeqIOtEbw7bNvg" elementId="org.eclipse.wst.server.ui.internal.webbrowser.actionSet">
@@ -463,7 +468,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xN6tiD92EeqIOtEbw7bNvg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_IXQLID94EeqoB7jVlwjtQw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_w7XlKz92EeqIOtEbw7bNvg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_6YQyjUD9EeqvxMCVzf8UXg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_w7XlKz92EeqIOtEbw7bNvg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_xN6tiT92EeqIOtEbw7bNvg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -3315,7 +3320,7 @@
   <addons xmi:id="_w698Zz92EeqIOtEbw7bNvg" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_w698aD92EeqIOtEbw7bNvg" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_w7CNwD92EeqIOtEbw7bNvg" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_H9F-sT94EeqoB7jVlwjtQw" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_w7ReUD92EeqIOtEbw7bNvg" elementId="org.springframework.tooling.ls.eclipse.gotosymbol.commands.category" name="STS4"/>
   <categories xmi:id="_w7ReUT92EeqIOtEbw7bNvg" elementId="org.eclipse.ui.category.edit" name="Edit"/>
