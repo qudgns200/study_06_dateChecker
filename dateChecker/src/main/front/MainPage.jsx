@@ -5,7 +5,11 @@ class MainPage extends React.Component {
 
     render() {
         return (
-            <div className="main">Main Page</div>
+            <div className="main">
+                <h1>Main Page</h1>
+                <h1>{name}</h1>
+            </div>
+            
         );
     }
 
