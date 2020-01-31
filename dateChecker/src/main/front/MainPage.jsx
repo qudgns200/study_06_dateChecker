@@ -7,7 +7,7 @@ class MainPage extends React.Component {
         return (
             <div className="main">
                 <h1>Main Page</h1>
-                <h1>{name}</h1>
+                <h1>${name}</h1>
             </div>
             
         );

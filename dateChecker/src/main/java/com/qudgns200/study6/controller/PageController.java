@@ -1,15 +1,18 @@
 package com.qudgns200.study6.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.qudgns200.study6.service.UserService;
+import com.qudgns200.study6.service.UserServiceImpl;
 
 @Controller
 public class PageController {
-	private UserService UserService;
+	
+	@Autowired
+	private UserServiceImpl UserService;
 	
 	@RequestMapping("/{name}.html")
 	public String page(@PathVariable String name, Model model) {
