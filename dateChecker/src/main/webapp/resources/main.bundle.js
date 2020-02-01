@@ -94,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -120,18 +120,43 @@ var MainPage =
 function (_React$Component) {
   _inherits(MainPage, _React$Component);
 
-  function MainPage() {
+  function MainPage(props) {
+    var _this;
+
     _classCallCheck(this, MainPage);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(MainPage).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(MainPage).call(this, props));
+    _this.state = {
+      name: ''
+    };
+    return _this;
   }
+  /* Component Life Cycle : constructor -> componentWillMount -> render */
+
+  /*
+  componentWillMount() {
+  client({method: 'GET', path: '/name'}).done(response => {
+  this.setState({name: response});
+  });
+  }
+  */
+
 
   _createClass(MainPage, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      fetch('http://localhost:8080/name?no=3').then(function (res) {
+        return res.json();
+      }).then(function (data) {
+        return console.log(data);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "main"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Main Page"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "$", name));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Main Page"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.state.name));
     }
   }]);
 
