@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 class MainPage extends React.Component {
 
@@ -11,29 +12,33 @@ class MainPage extends React.Component {
     }
 
     /* Component Life Cycle : constructor -> componentWillMount -> render */
-    /*
-    componentWillMount() {
-		client({method: 'GET', path: '/name'}).done(response => {
-			this.setState({name: response});
-		});
-    }
-    */
-   componentWillMount() {
-       fetch('http://localhost:8080/name?no=3')
-       .then(res => res.json())
-       .then(data => console.log(data));
-   }
+
+    async componentDidMount() {
+        let { data: name } = await axios.get('http://localhost:8080/name?no=3');
+        this.setState({ name });
+        console.log(this.state.name);
+    };
 
     render() {
-        return (
-            <div className="main">
-                <h1>Main Page</h1>
-                <h1>{this.state.name}</h1>
-            </div>
+        const { name } = this.state;
 
-        );
+        if (name.length > 0) {
+            return (
+                <div className="main">
+                    <h1>{name}</h1>
+                </div>
+            )
+        } else {
+            return (
+                <div className="main">
+                    <h1>Main Page</h1>
+                </div>
+
+            );
+        }
     }
 
 }
+/* /*<h1>{this.state.name}</h1> */
 
 ReactDOM.render(<MainPage />, document.getElementById('root'));
