@@ -90,3 +90,14 @@ class MainPage extends React.Component {
 }
 
 ReactDOM.render(<MainPage />, document.getElementById('root'));
+
+
+ReactDom.rendor(
+    <Router history={browserHistory}>
+        <Route path="/" component={SignInSide}>
+            <IndexRoute component={SignInSide}/>
+            <Route path="SignUp" component={SignUp}/>
+        </Route>
+    </Router>,
+    document.getElementById('root')
+);

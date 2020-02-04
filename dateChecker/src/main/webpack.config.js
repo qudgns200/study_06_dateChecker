@@ -3,8 +3,10 @@ const path = require('path');
 module.exports = {
   context: path.resolve(__dirname, 'front'),
   entry: {
-    main : ['babel-polyfill','./MainPage.jsx']
+    SignIn : ['babel-polyfill','./SignInPage.jsx'],
+    SignUp : ['babel-polyfill','./SignUpPage.jsx']
   },
+
   output: {
     path: path.resolve(__dirname, 'webapp/resources'),
     filename: '[name].bundle.js',
