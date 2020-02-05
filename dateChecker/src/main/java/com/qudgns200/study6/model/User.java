@@ -1,13 +1,22 @@
 package com.qudgns200.study6.model;
 
 public class User {
-	private int no;
+	private String id;
+	private String password;
 	private String name;
-	public int getNo() {
-		return no;
+	private String email;
+	
+	public String getId() {
+		return id;
 	}
-	public void setNo(int no) {
-		this.no = no;
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getName() {
 		return name;
@@ -15,8 +24,15 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
 	@Override
 	public String toString() {
-		return "User [no=" + no + ", name=" + name + "]";
+		return "User [id=" + id + ", password=" + password + ", name=" + name + ", email=" + email + "]";
 	}
 }

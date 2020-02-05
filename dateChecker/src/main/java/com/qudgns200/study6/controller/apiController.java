@@ -12,8 +12,4 @@ public class apiController {
 	@Autowired
 	private UserServiceImpl UserService;
 
-	@RequestMapping("/name")
-	public String nameApi(@RequestParam int no) {
-		return UserService.searchOne(no);
-	}
 }
