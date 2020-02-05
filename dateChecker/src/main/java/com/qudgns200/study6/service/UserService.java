@@ -4,8 +4,8 @@ import com.qudgns200.study6.model.User;
 
 public interface UserService {
 
-	public String getUser(String id);
-	public int signUpUser(User user);
-	public int modifyUser(User user);
-	public int outUser(String id);
+	public User getUser(String id);
+	public boolean signUpUser(User user);
+	public boolean modifyUser(User user);
+	public boolean outUser(String id);
 }

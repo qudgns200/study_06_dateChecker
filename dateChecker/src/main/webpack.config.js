@@ -4,7 +4,8 @@ module.exports = {
   context: path.resolve(__dirname, 'front'),
   entry: {
     SignIn : ['babel-polyfill','./SignInPage.jsx'],
-    SignUp : ['babel-polyfill','./SignUpPage.jsx']
+    SignUp : ['babel-polyfill','./SignUpPage.jsx'],
+    Main : ['babel-polyfill','./MainPage.jsx']
   },
 
   output: {

@@ -59,15 +59,6 @@ class DateCheckerApplicationTests {
 //		System.out.println(UserService.searchOne(4));
 //	}
 	
-	@Test
-	void queryTest() {
-		User newUser = new User();
-		newUser.setNo(10);
-		newUser.setName("Lizzie");
-		
-		System.out.println(userService.searchOne(3));
-	}
-	
 //	@Test
 //	void testConnection() {
 //		try {

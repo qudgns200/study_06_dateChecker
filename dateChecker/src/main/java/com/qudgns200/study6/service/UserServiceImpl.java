@@ -10,49 +10,28 @@ public class UserServiceImpl implements UserService {
 	
 	@Autowired
 	private UserMapper mapper;
-
+	
 	@Override
-	public String getUser(String id) {
+	public User getUser(String id) {
 		// TODO Auto-generated method stub
-		return mapper.selectUser(id).getId();
+		return mapper.selectUser(id);
 	}
 
 	@Override
-	public int signUpUser(User user) {
+	public boolean signUpUser(User user) {
 		// TODO Auto-generated method stub
-		try {
-			mapper.insertUser(user);
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-			return 1;
-		}
-		return 0;
+		return mapper.insertUser(user) > 0 ? true : false;
 	}
 
 	@Override
-	public int modifyUser(User user) {
+	public boolean modifyUser(User user) {
 		// TODO Auto-generated method stub
-		try {
-			mapper.updateUser(user);
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-			return 1;
-		}
-		return 0;
+		return mapper.updateUser(user) > 0 ? true : false;
 	}
 
 	@Override
-	public int outUser(String id) {
+	public boolean outUser(String id) {
 		// TODO Auto-generated method stub
-		try {
-			mapper.deleteUser(id);
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-			return 1;
-		}
-		return 0;
+		return mapper.deleteUser(id) > 0 ? true : false;
 	}
 }
