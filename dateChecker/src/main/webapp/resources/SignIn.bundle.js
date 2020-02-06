@@ -41456,6 +41456,8 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var classes = this.props.classes;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_8__["default"], {
         container: true,
@@ -41484,7 +41486,9 @@ function (_React$Component) {
         variant: "h5"
       }, "Sign in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: classes.form,
-        onSubmit: this.executeLogin(this.state.id, this.state.password),
+        onSubmit: function onSubmit() {
+          return _this2.executeLogin(_this2.state.id, _this2.state.password);
+        },
         noValidate: true
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__["default"], {
         variant: "outlined",
