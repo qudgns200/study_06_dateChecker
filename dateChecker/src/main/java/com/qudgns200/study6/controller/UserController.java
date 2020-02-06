@@ -33,18 +33,22 @@ public class UserController {
     }
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public @ResponseBody int login(@RequestBody User user) {
+	public @ResponseBody int login(@RequestBody String user) {
 		// return 0 => Right Value
 		// return 1 => Not exist ID
 		// return 2 => Wrong Password
-		User selectUser = service.getUser(user.getId());
 		
-		if(selectUser == null) {
-			return 1;
-		} else {
-			if(user.getPassword().equals(selectUser.getPassword())) return 0;
-			else return 2;
-		}
+		System.out.println("user: " + user);
+		return 1;
+		
+//		User selectUser = service.getUser(user.getId());
+//		
+//		if(selectUser == null) {
+//			return 1;
+//		} else {
+//			if(user.getPassword().equals(selectUser.getPassword())) return 0;
+//			else return 2;
+//		}
     }
 	
 	@RequestMapping("/join")
