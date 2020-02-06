@@ -33,12 +33,12 @@ public class UserController {
     }
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public @ResponseBody int login(@RequestBody String user) {
+	public @ResponseBody int login(User user) {
 		// return 0 => Right Value
 		// return 1 => Not exist ID
 		// return 2 => Wrong Password
 		
-		System.out.println("user: " + user);
+		System.out.println("user: " + user.toString());
 		return 1;
 		
 //		User selectUser = service.getUser(user.getId());
