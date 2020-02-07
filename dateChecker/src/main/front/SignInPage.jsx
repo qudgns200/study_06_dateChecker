@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SignIn_css from './SignInPage_css.jsx';
+import SignIn_Component from './SignInPageComponent.jsx';
 
-function SignIn() {
-  return (
-    <div><SignIn_css/></div>
-  );
+export function SignIn() {
+	return(
+		<div>
+			<SignIn_Component />
+		</div>
+	);
 }
 
-ReactDOM.render(<SignIn />, document.getElementById('root'));
+ReactDOM.render(<SignIn/> ,document.getElementById('root'));

@@ -23,6 +23,7 @@ public class UserController {
 	@RequestMapping("/{name}")
 	public String otherPage(@PathVariable String name, Model model) {
         model.addAttribute("pageName", name);
+        System.out.println("name : " + name);
         return "page";
     }
 	
@@ -37,18 +38,16 @@ public class UserController {
 		// return 0 => Right Value
 		// return 1 => Not exist ID
 		// return 2 => Wrong Password
+		User selectUser = service.getUser(user.getId());
 		
-		System.out.println("user: " + user.toString());
-		return 1;
+		System.out.println(selectUser.toString());
 		
-//		User selectUser = service.getUser(user.getId());
-//		
-//		if(selectUser == null) {
-//			return 1;
-//		} else {
-//			if(user.getPassword().equals(selectUser.getPassword())) return 0;
-//			else return 2;
-//		}
+		if(selectUser.getId() == null) {
+			return 1;
+		} else {
+			if(user.getPassword().equals(selectUser.getPassword())) return 0;
+			else return 2;
+		}
     }
 	
 	@RequestMapping("/join")

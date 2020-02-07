@@ -61,40 +61,44 @@ function Copyright() {
   );
 }
 
-class SignIn_css extends React.Component {
+class SignIn_Component extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       id: "",
-      password: ""
+      password: "",
+      isCorrect: 3
     }
-    this.handleChange = this.handleChange.bind(this);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    this.handleValueChange = this.handleValueChange.bind(this);
   }
 
   // This function is for getting reply from Server.
   // 1. Get reply message that isCorrect Id, Password
   // 2. IsCorrect : Move main page.
   // 3. IsWrong : Show Modal and Login Again. 
-  executeLogin(id, password) {
+  async handleFormSubmit(e) {
+    e.preventDefault()
+
     let user = {
-      id: id,
-      password: password
+      id: this.state.id,
+      password: this.state.password
     }
 
-    axios.get('/login', {
-      params: user
-    }).then(response => {
-      console.log(response);
-    })
-      .catch(function (error) {
-        console.log(error);
-      });
-  };
+    await axios.get('/login', { params: user })
+    .then(res => {
+      console.log("response: " + res.data);
+      this.setState({ isCorrect: res.data });
+    });
+
+     document.location.href = "/Main";
+
+  }
 
   // It is function which is changed State's Value.
   // Whenever Changing TextField's Value,
   // then State's Value is Changed.
-  handleChange(e) {
+  handleValueChange(e) {
     this.setState({
       [e.target.name]: e.target.value
     });
@@ -102,7 +106,7 @@ class SignIn_css extends React.Component {
 
   render() {
 
-    const {classes} = this.props;
+    const { classes } = this.props;
 
     return (
       <Grid container component="main" className={classes.root}>
@@ -116,7 +120,7 @@ class SignIn_css extends React.Component {
             <Typography component="h1" variant="h5">
               Sign in
           </Typography>
-            <form className={classes.form} onSubmit={()=>this.executeLogin(this.state.id, this.state.password)} noValidate>
+            <form className={classes.form} onSubmit={this.handleFormSubmit} noValidate>
               <TextField
                 variant="outlined"
                 margin="normal"
@@ -127,7 +131,8 @@ class SignIn_css extends React.Component {
                 name="id"
                 autoComplete="username"
                 autoFocus
-                onChange={this.handleChange}
+                onChange={this.handleValueChange}
+                value={this.state.id}
               />
               <TextField
                 variant="outlined"
@@ -139,7 +144,8 @@ class SignIn_css extends React.Component {
                 type="password"
                 id="password"
                 autoComplete="current-password"
-                onChange={this.handleChange}
+                onChange={this.handleValueChange}
+                value={this.state.password}
               />
               <Button
                 type="submit"
@@ -173,4 +179,4 @@ class SignIn_css extends React.Component {
   }
 }
 
-export default withStyles(useStyles)(SignIn_css);
+export default withStyles(useStyles)(SignIn_Component);
