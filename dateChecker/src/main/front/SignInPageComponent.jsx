@@ -91,7 +91,13 @@ class SignIn_Component extends React.Component {
       this.setState({ isCorrect: res.data });
     });
 
-     document.location.href = "/Main";
+    if(this.state.isCorrect==0) {
+      document.location.href = "/Main";
+    } else if(this.state.isCorrect==1) {
+
+    } else {
+
+    }
 
   }
 
