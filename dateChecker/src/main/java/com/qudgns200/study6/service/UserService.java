@@ -8,4 +8,5 @@ public interface UserService {
 	public boolean signUpUser(User user);
 	public boolean modifyUser(User user);
 	public boolean outUser(String id);
+	public int compareUser(User user1, User user2);
 }

@@ -34,4 +34,14 @@ public class UserServiceImpl implements UserService {
 		// TODO Auto-generated method stub
 		return mapper.deleteUser(id) > 0 ? true : false;
 	}
+
+	@Override
+	public int compareUser(User user1, User user2) {
+		// TODO Auto-generated method stub
+		if(user1.getId()==null) return 1;
+		else {
+			if(user1.getPassword().equals(user2.getPassword())) return 0;
+			else return 2;
+		}
+	}
 }
