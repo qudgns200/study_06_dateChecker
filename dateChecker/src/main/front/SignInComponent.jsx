@@ -61,7 +61,7 @@ function Copyright() {
   );
 }
 
-class SignIn_Component extends React.Component {
+class SignInComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -169,7 +169,7 @@ class SignIn_Component extends React.Component {
                 </Link>
                 </Grid>
                 <Grid item>
-                  <Link href='/SignUp' variant="body2">
+                  <Link href="/SignUp" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>
@@ -185,4 +185,4 @@ class SignIn_Component extends React.Component {
   }
 }
 
-export default withStyles(useStyles)(SignIn_Component);
+export default withStyles(useStyles)(SignInComponent);

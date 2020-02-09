@@ -3,9 +3,8 @@ const path = require('path');
 module.exports = {
   context: path.resolve(__dirname, 'front'),
   entry: {
-    SignIn : ['babel-polyfill','./SignInPage.jsx'],
-    SignUp : ['babel-polyfill','./SignUpPage.jsx'],
-    Main : ['babel-polyfill','./MainPage.jsx']
+    SignIn : ['babel-polyfill','./SignIn.jsx'],
+    SignUp : ['babel-polyfill','./SignUp.jsx']
   },
 
   output: {

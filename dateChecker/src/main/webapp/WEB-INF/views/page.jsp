@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>${pageName }</title>
+<title>${pageName}</title>
 </head>
 <body>
 <body>

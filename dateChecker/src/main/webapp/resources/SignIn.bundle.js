@@ -9517,19 +9517,22 @@ module.exports = function (regExp, replace) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SignIn; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(334);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(339);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _SignInPage_css_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(345);
-
+/* harmony import */ var _SignInComponent_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(345);
+/*
+  # Login Page
+  # Using UI-Material Free Templete 
+*/
 
 
 
 function SignIn() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SignInPage_css_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SignInComponent_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 }
-
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(SignIn, null), document.getElementById('root'));
 
 /***/ }),
@@ -41329,6 +41332,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -41407,22 +41414,24 @@ function Copyright() {
   }, "Your Website"), ' ', new Date().getFullYear(), '.');
 }
 
-var SignIn_css =
+var SignInComponent =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(SignIn_css, _React$Component);
+  _inherits(SignInComponent, _React$Component);
 
-  function SignIn_css(props) {
+  function SignInComponent(props) {
     var _this;
 
-    _classCallCheck(this, SignIn_css);
+    _classCallCheck(this, SignInComponent);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(SignIn_css).call(this, props));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(SignInComponent).call(this, props));
     _this.state = {
       id: "",
-      password: ""
+      password: "",
+      isCorrect: 3
     };
-    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    _this.handleFormSubmit = _this.handleFormSubmit.bind(_assertThisInitialized(_this));
+    _this.handleValueChange = _this.handleValueChange.bind(_assertThisInitialized(_this));
     return _this;
   } // This function is for getting reply from Server.
   // 1. Get reply message that isCorrect Id, Password
@@ -41430,34 +41439,65 @@ function (_React$Component) {
   // 3. IsWrong : Show Modal and Login Again. 
 
 
-  _createClass(SignIn_css, [{
-    key: "executeLogin",
-    value: function executeLogin(id, password) {
-      var user = {
-        id: id,
-        password: password
-      };
-      axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('/login', {
-        params: user
-      }).then(function (response) {
-        console.log(response);
-      })["catch"](function (error) {
-        console.log(error);
-      });
-    }
-  }, {
-    key: "handleChange",
-    // It is function which is changed State's Value.
+  _createClass(SignInComponent, [{
+    key: "handleFormSubmit",
+    value: function () {
+      var _handleFormSubmit = _asyncToGenerator(
+      /*#__PURE__*/
+      regeneratorRuntime.mark(function _callee(e) {
+        var _this2 = this;
+
+        var user;
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                e.preventDefault();
+                user = {
+                  id: this.state.id,
+                  password: this.state.password
+                };
+                _context.next = 4;
+                return axios__WEBPACK_IMPORTED_MODULE_12___default.a.get('/login', {
+                  params: user
+                }).then(function (res) {
+                  console.log("response: " + res.data);
+
+                  _this2.setState({
+                    isCorrect: res.data
+                  });
+                });
+
+              case 4:
+                if (this.state.isCorrect == 0) {
+                  document.location.href = "/Main";
+                } else if (this.state.isCorrect == 1) {} else {}
+
+              case 5:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function handleFormSubmit(_x) {
+        return _handleFormSubmit.apply(this, arguments);
+      }
+
+      return handleFormSubmit;
+    }() // It is function which is changed State's Value.
     // Whenever Changing TextField's Value,
     // then State's Value is Changed.
-    value: function handleChange(e) {
+
+  }, {
+    key: "handleValueChange",
+    value: function handleValueChange(e) {
       this.setState(_defineProperty({}, e.target.name, e.target.value));
     }
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
-
       var classes = this.props.classes;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_8__["default"], {
         container: true,
@@ -41486,9 +41526,7 @@ function (_React$Component) {
         variant: "h5"
       }, "Sign in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: classes.form,
-        onSubmit: function onSubmit() {
-          return _this2.executeLogin(_this2.state.id, _this2.state.password);
-        },
+        onSubmit: this.handleFormSubmit,
         noValidate: true
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__["default"], {
         variant: "outlined",
@@ -41500,7 +41538,8 @@ function (_React$Component) {
         name: "id",
         autoComplete: "username",
         autoFocus: true,
-        onChange: this.handleChange
+        onChange: this.handleValueChange,
+        value: this.state.id
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__["default"], {
         variant: "outlined",
         margin: "normal",
@@ -41511,7 +41550,8 @@ function (_React$Component) {
         type: "password",
         id: "password",
         autoComplete: "current-password",
-        onChange: this.handleChange
+        onChange: this.handleValueChange,
+        value: this.state.password
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
         type: "submit",
         fullWidth: true,
@@ -41537,10 +41577,10 @@ function (_React$Component) {
     }
   }]);
 
-  return SignIn_css;
+  return SignInComponent;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_11__["withStyles"])(useStyles)(SignIn_css));
+/* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_11__["withStyles"])(useStyles)(SignInComponent));
 
 /***/ }),
 /* 346 */

@@ -125,4 +125,4 @@ export default function SignUp() {
   );
 }
 
-ReactDOM.render(<SignUp /> ,document.getElementById('root'));
+ReactDOM.render(<SignUp/>, document.getElementById('root'));
