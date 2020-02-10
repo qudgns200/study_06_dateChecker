@@ -1,5 +1,7 @@
 package com.qudgns200.study6.controller;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -12,13 +14,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.qudgns200.study6.model.User;
+import com.qudgns200.study6.service.DateServiceImpl;
 import com.qudgns200.study6.service.UserServiceImpl;
 
 @Controller
-public class UserController {
+public class AppController{
 
 	@Autowired
-	private UserServiceImpl service;
+	private UserServiceImpl uService;
+	@Autowired
+	private DateServiceImpl dService;
 
 	private HttpSession session;
 	
@@ -42,8 +47,8 @@ public class UserController {
 		int result = 0;
 		
 		session = req.getSession(); // Get Session
-		User selectUser = service.getUser(user.getId());
-		result = service.compareUser(selectUser, user);
+		User selectUser = uService.getUser(user.getId());
+		result = uService.compareUser(selectUser, user);
 		if(result==0) session.setAttribute("ID", user.getId());
 		return result;
     }
@@ -56,7 +61,7 @@ public class UserController {
 		user.setName(req.getParameter("name"));
 		user.setEmail(req.getParameter("email"));
 
-		if (service.signUpUser(user)) {
+		if (uService.signUpUser(user)) {
 			model.addAttribute("pageName", "Main");
 			return "page";
 		} else {
@@ -65,9 +70,19 @@ public class UserController {
 		}
 	}
 	
-	@RequestMapping("getUserInfo")
+	@RequestMapping("/getUserInfo")
 	public @ResponseBody String getUserInfo(HttpServletRequest req) {
 		session = req.getSession(); // Get Session
 		return (String)session.getAttribute("ID");
+	}
+	
+	@RequestMapping("/getDateInfo")
+	public @ResponseBody ArrayList<Long> getDateInfo(HttpServletRequest req) {
+		session = req.getSession(); // Get Session
+		String currentID = (String)session.getAttribute("ID");
+		
+		ArrayList<Long> arr = dService.getDateInfo(currentID);
+		
+		return arr;
 	}
 }
