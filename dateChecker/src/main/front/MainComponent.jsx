@@ -29,7 +29,7 @@ class MainComponent extends React.Component {
 
       axios.get('/getDateInfo')
       .then(res => {
-        console.log("response: " + res.data);
+        console.log("data: " + res.data);
       });
   }
 

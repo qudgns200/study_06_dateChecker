@@ -20,25 +20,18 @@ public class DateServiceImpl implements DateService {
 	public ArrayList<Long> getDateInfo(String id) {
 		// TODO Auto-generated method stub
 		
-		// Calculate a Today
-		Calendar today = Calendar.getInstance();		
+		Calendar today = Calendar.getInstance(); // Get Today
+		Calendar dDay = Calendar.getInstance(); 
+		
 		long tday = today.getTimeInMillis()/(24*60*60*1000);
 		
-		ArrayList<User_Date> arr = mapper.getDate(id);
-		
-		System.out.println("day : " + arr.get(0).getInput_date());
-		
-		ArrayList<Long> diff = new ArrayList<Long>();
+		ArrayList<User_Date> arr = mapper.getDate(id); // Days Which User entered
+		ArrayList<Long> diff = new ArrayList<Long>(); // For return Values
 		
 		for(int i=0; i<arr.size(); i++) {
-			Calendar dday = new GregorianCalendar(arr.get(i).getInput_date().getYear()+1900,
-					arr.get(i).getInput_date().getMonth()+1,
-					arr.get(i).getInput_date().getDay()					
-					);
-			diff.add(tday-(dday.getTimeInMillis()/(24*60*60*1000)));
+			dDay.set(arr.get(i).getInput_date().getYear()+1900, arr.get(i).getInput_date().getMonth()+1, arr.get(i).getInput_date().getDay()-20);
+			diff.add(tday-(dDay.getTimeInMillis()/(24*60*60*1000)));
 		}
-		
-		System.out.println("diff : " + diff.toString());
 		
 		return diff;
 	}

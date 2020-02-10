@@ -66058,7 +66058,7 @@ function (_React$Component) {
         });
       });
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/getDateInfo').then(function (res) {
-        console.log("response: " + res.data);
+        console.log("data: " + res.data);
       });
     }
   }, {
