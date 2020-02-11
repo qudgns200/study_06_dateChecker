@@ -13,7 +13,6 @@ const useStyles = theme => ({
   root: {
     height: '80vh',
     background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-    border: 10,
   },
   listDiv: {
     height: '65vh',
@@ -25,6 +24,10 @@ const useStyles = theme => ({
     height: '8vh',
     background: 'blue',
     margin: '20px'
+  },
+  listData: {
+    padding: '30px',
+    margin: '5px 0'
   }
 });
 
@@ -32,7 +35,8 @@ class MainComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: ""
+      id: "",
+      dday: []
     }
   }
 
@@ -45,24 +49,28 @@ class MainComponent extends React.Component {
     axios.get('/getDateInfo')
       .then(res => {
         console.log("data: " + res.data);
+        this.setState({ dday: res.data });
       });
   }
 
   render() {
     const { classes } = this.props;
 
+    const ddayList = this.state.dday.map(one => {
+      return (
+        <Button variant="contained" fullWidth className={classes.listData}>
+          {one}
+        </Button>
+      );
+    })
+
     return (
       <Container maxWidth="xs" className={classes.root}>
         <div className={classes.listDiv}>
-          <List>
-            <Paper>
-              <ListItem button>
-                <ListItemText primary={this.state.id} />
-                <h1>Memo</h1>
-              </ListItem>
-            </Paper>
-          </List>
+          <h3>{this.state.id} 님</h3>
+            {ddayList}
         </div>
+
         <div className={classes.buttonDiv}>
           <h1>
             <Button fullWidth

@@ -66100,8 +66100,7 @@ var useStyles = function useStyles(theme) {
   return {
     root: {
       height: '80vh',
-      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-      border: 10
+      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)'
     },
     listDiv: {
       height: '65vh',
@@ -66113,6 +66112,10 @@ var useStyles = function useStyles(theme) {
       height: '8vh',
       background: 'blue',
       margin: '20px'
+    },
+    listData: {
+      padding: '30px',
+      margin: '5px 0'
     }
   };
 };
@@ -66129,7 +66132,8 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(MainComponent).call(this, props));
     _this.state = {
-      id: ""
+      id: "",
+      dday: []
     };
     return _this;
   }
@@ -66146,22 +66150,29 @@ function (_React$Component) {
       });
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/getDateInfo').then(function (res) {
         console.log("data: " + res.data);
+
+        _this2.setState({
+          dday: res.data
+        });
       });
     }
   }, {
     key: "render",
     value: function render() {
       var classes = this.props.classes;
+      var ddayList = this.state.dday.map(function (one) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
+          variant: "contained",
+          fullWidth: true,
+          className: classes.listData
+        }, one);
+      });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_6__["default"], {
         maxWidth: "xs",
         className: classes.root
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: classes.listDiv
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_7__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_4__["ListItem"], {
-        button: true
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_ListItemText__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        primary: this.state.id
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Memo"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.state.id, " \uB2D8"), ddayList), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: classes.buttonDiv
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_8__["default"], {
         fullWidth: true,
