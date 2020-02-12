@@ -16344,7 +16344,10 @@ function (_React$Component) {
         variant: "body2"
       }, "Forgot password?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_8__["default"], {
         item: true
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Link__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        to: "/SignUp",
+        variant: "body2"
+      }, "Don't have an account? Sign Up"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_7__["default"], {
         mt: 5
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Copyright, null))))));
     }

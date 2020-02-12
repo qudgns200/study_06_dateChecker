@@ -1,11 +1,7 @@
 import React from 'react';
 import axios from 'axios'; // Add for Ajax
 import { withStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import { ListItem } from '@material-ui/core';
-import ListItemText from '@material-ui/core/ListItemText';
 import Container from '@material-ui/core/Container';
-import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import AddCircleTwoToneIcon from '@material-ui/icons/AddCircleTwoTone';
 
@@ -38,6 +34,7 @@ class MainComponent extends React.Component {
       id: "",
       dday: []
     }
+    this.moveDatePicker = this.moveDatePicker.bind(this);
   }
 
   componentDidMount() {
@@ -51,6 +48,10 @@ class MainComponent extends React.Component {
         console.log("data: " + res.data);
         this.setState({ dday: res.data });
       });
+  }
+
+  moveDatePicker() {
+    document.location.href = "/DatePicker";
   }
 
   render() {
@@ -73,15 +74,18 @@ class MainComponent extends React.Component {
 
         <div className={classes.buttonDiv}>
           <h1>
-            <Button fullWidth
+            <Button 
+              fullWidth
+              component="button"
               variant="contained"
-              color="primary">
+              color="primary"
+              onClick={this.moveDatePicker}
+              >
               <AddCircleTwoToneIcon />
             </Button>
           </h1>
         </div>
       </Container>
-
     );
   }
 }

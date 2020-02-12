@@ -5,7 +5,8 @@ module.exports = {
   entry: {
     SignIn : ['babel-polyfill','./SignIn.jsx'],
     SignUp : ['babel-polyfill','./SignUp.jsx'],
-    Main : ['babel-polyfill','./Main.jsx']
+    Main : ['babel-polyfill','./Main.jsx'],
+    DatePicker : ['babel-polyfill','./DatePicker.jsx'],
   },
 
   output: {
