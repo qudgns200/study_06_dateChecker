@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 625);
+/******/ 	return __webpack_require__(__webpack_require__.s = 628);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -55765,18 +55765,19 @@ module.exports = function spread(callback) {
 /* 619 */,
 /* 620 */,
 /* 621 */,
-/* 622 */
+/* 622 */,
+/* 623 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Container__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(623);
+/* harmony import */ var _Container__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(624);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Container__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
 
 
 /***/ }),
-/* 623 */
+/* 624 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55923,16 +55924,18 @@ var Container = react__WEBPACK_IMPORTED_MODULE_3___default.a.forwardRef(function
 })(Container));
 
 /***/ }),
-/* 624 */,
-/* 625 */
+/* 625 */,
+/* 626 */,
+/* 627 */,
+/* 628 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(626);
+module.exports = __webpack_require__(629);
 
 
 /***/ }),
-/* 626 */
+/* 629 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55942,7 +55945,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(457);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _MainComponent_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(627);
+/* harmony import */ var _MainComponent_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(630);
 
 
 
@@ -55952,7 +55955,7 @@ function Main() {
 react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Main, null), document.getElementById('root'));
 
 /***/ }),
-/* 627 */
+/* 630 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55962,9 +55965,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(588);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(582);
-/* harmony import */ var _material_ui_core_Container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(622);
+/* harmony import */ var _material_ui_core_Container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(623);
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(453);
-/* harmony import */ var _material_ui_icons_AddCircleTwoTone__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(628);
+/* harmony import */ var _material_ui_icons_AddCircleTwoTone__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(631);
 /* harmony import */ var _material_ui_icons_AddCircleTwoTone__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_AddCircleTwoTone__WEBPACK_IMPORTED_MODULE_5__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -55994,23 +55997,15 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var useStyles = function useStyles(theme) {
   return {
-    root: {
-      height: '80vh',
-      background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)'
-    },
     listDiv: {
-      height: '65vh',
       background: 'gray',
-      margin: '10px',
-      padding: theme.spacing(1)
+      padding: theme.spacing(1),
+      alignItems: 'center'
     },
     buttonDiv: {
-      height: '8vh',
-      background: 'blue',
       margin: '20px'
     },
     listData: {
-      padding: '30px',
       margin: '5px 0'
     }
   };
@@ -56067,14 +56062,13 @@ function (_React$Component) {
           variant: "contained",
           fullWidth: true,
           className: classes.listData
-        }, one);
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, one));
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        maxWidth: "xs",
-        className: classes.root
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        maxWidth: "xs"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: classes.listDiv
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.state.id, " \uB2D8"), ddayList), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("center", null, this.state.id, " \uC758 D-Day"))), ddayList), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: classes.buttonDiv
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
         fullWidth: true,
@@ -56092,7 +56086,7 @@ function (_React$Component) {
 /* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["withStyles"])(useStyles)(MainComponent));
 
 /***/ }),
-/* 628 */
+/* 631 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

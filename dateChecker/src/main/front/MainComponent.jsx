@@ -6,23 +6,15 @@ import Button from '@material-ui/core/Button';
 import AddCircleTwoToneIcon from '@material-ui/icons/AddCircleTwoTone';
 
 const useStyles = theme => ({
-  root: {
-    height: '80vh',
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-  },
   listDiv: {
-    height: '65vh',
     background: 'gray',
-    margin: '10px',
     padding: theme.spacing(1),
+    alignItems: 'center',
   },
   buttonDiv: {
-    height: '8vh',
-    background: 'blue',
     margin: '20px'
   },
   listData: {
-    padding: '30px',
     margin: '5px 0'
   }
 });
@@ -60,15 +52,17 @@ class MainComponent extends React.Component {
     const ddayList = this.state.dday.map(one => {
       return (
         <Button variant="contained" fullWidth className={classes.listData}>
-          {one}
+          <h1>{one}</h1>
         </Button>
       );
     })
 
     return (
-      <Container maxWidth="xs" className={classes.root}>
-        <div className={classes.listDiv}>
-          <h3>{this.state.id} 님</h3>
+      <Container maxWidth="xs">
+        <div>
+          <div className={classes.listDiv}>
+            <h3><center>{this.state.id} 의 D-Day</center></h3>
+          </div>
             {ddayList}
         </div>
 

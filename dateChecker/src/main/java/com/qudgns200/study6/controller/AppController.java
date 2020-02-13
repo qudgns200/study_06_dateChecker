@@ -54,21 +54,9 @@ public class AppController{
 		return result;
     }
 
-	@RequestMapping("/join")
-	public String join(HttpServletRequest req, Model model) {
-		User user = new User();
-		user.setId(req.getParameter("id"));
-		user.setPassword(req.getParameter("password"));
-		user.setName(req.getParameter("name"));
-		user.setEmail(req.getParameter("email"));
-
-		if (uService.signUpUser(user)) {
-			model.addAttribute("pageName", "Main");
-			return "page";
-		} else {
-			System.out.println("ERROR");
-			return "Error22";
-		}
+	@RequestMapping(value = "/join", method = RequestMethod.GET)
+	public @ResponseBody boolean join(User user) {
+		return uService.signUpUser(user);
 	}
 	
 	@RequestMapping("/getUserInfo")
