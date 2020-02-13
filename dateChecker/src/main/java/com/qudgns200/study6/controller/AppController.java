@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.qudgns200.study6.model.User;
+import com.qudgns200.study6.model.User_Date;
 import com.qudgns200.study6.service.DateServiceImpl;
 import com.qudgns200.study6.service.UserServiceImpl;
 
@@ -84,5 +85,13 @@ public class AppController{
 		ArrayList<Long> arr = dService.getDateInfo(currentID);
 		
 		return arr;
+	}
+	
+	@RequestMapping(value = "/inputDate", method = RequestMethod.GET)
+	public @ResponseBody boolean inputDate(String id, String input_date, HttpServletRequest req) {		
+		User_Date user_date = new User_Date();
+		user_date.setInput_date(dService.strToDate(input_date));
+		user_date.setId(id);
+		return dService.putDate(user_date) == true ? true : false;
 	}
 }

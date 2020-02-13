@@ -7,4 +7,18 @@
  	<select id="getDate" parameterType="String" resultType="com.qudgns200.study6.model.User_Date">
  		select * from user_date where id=#{id}
  	</select>
+ 	
+ 	<insert id="putDate" parameterType="com.qudgns200.study6.model.User_Date">
+ 		insert into user_date(id, input_date)
+ 		values(#{id}, #{input_date});
+ 	</insert>
+ 	
+ 	<update id="updateDate" parameterType="com.qudgns200.study6.model.User_Date">
+ 		update user_date set input_date=#{input_date}
+ 		where no=#{no} and id=#{id};  
+ 	</update>
+ 	
+ 	<delete id="deleteDate" parameterType="com.qudgns200.study6.model.User_Date">
+ 		delete from user_date where no=#{no} and id=#{id}
+ 	</delete>
  </mapper>

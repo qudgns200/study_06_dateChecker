@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public int compareUser(User user1, User user2) {
 		// TODO Auto-generated method stub
-		if(user1.getId()==null) return 1;
+		if(user1==null) return 1;
 		else {
 			if(user1.getPassword().equals(user2.getPassword())) return 0;
 			else return 2;

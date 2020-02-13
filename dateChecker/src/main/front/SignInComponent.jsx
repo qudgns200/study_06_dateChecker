@@ -16,6 +16,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import axios from 'axios'; // Add for Ajax
+import Dialog from '@material-ui/core/Dialog';
 
 const useStyles = theme => ({
   root: {
@@ -46,6 +47,16 @@ const useStyles = theme => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  modal: {
+    //position: 'absolute',
+    width: 400,
+    backgroundColor: theme.palette.background.paper,
+    border: '2px solid #000',
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });
 
 function Copyright() {
@@ -67,10 +78,13 @@ class SignInComponent extends React.Component {
     this.state = {
       id: "",
       password: "",
-      isCorrect: 3
+      isCorrect: 3,
+      open: false
     }
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleValueChange = this.handleValueChange.bind(this);
+    this.handleOpen = this.handleOpen.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
   // This function is for getting reply from Server.
@@ -86,19 +100,16 @@ class SignInComponent extends React.Component {
     }
 
     await axios.get('/login', { params: user })
-    .then(res => {
-      console.log("response: " + res.data);
-      this.setState({ isCorrect: res.data });
-    });
+      .then(res => {
+        console.log("response: " + res.data);
+        this.setState({ isCorrect: res.data });
+      });
 
-    if(this.state.isCorrect==0) {
+    if (this.state.isCorrect == 0) {
       document.location.href = "/Main";
-    } else if(this.state.isCorrect==1) {
-
     } else {
-
+      this.handleOpen();
     }
-
   }
 
   // It is function which is changed State's Value.
@@ -110,8 +121,19 @@ class SignInComponent extends React.Component {
     });
   }
 
-  render() {
+  handleOpen() {
+    this.setState({
+      open: true
+    });
+  };
 
+  handleClose() {
+    this.setState({
+      open: false
+    });
+  };
+
+  render() {
     const { classes } = this.props;
 
     return (
@@ -179,7 +201,17 @@ class SignInComponent extends React.Component {
               </Box>
             </form>
           </div>
+
+          <Dialog open={this.state.open} onClose={this.handleClose}>
+            <div className={classes.modal}>
+              <h2 id="simple-modal-title">Failed Login</h2>
+              <p id="simple-modal-description">
+                Wrong Password or Not exist ID...
+            </p>
+            </div>
+          </Dialog>
         </Grid>
+
       </Grid>
     );
   }

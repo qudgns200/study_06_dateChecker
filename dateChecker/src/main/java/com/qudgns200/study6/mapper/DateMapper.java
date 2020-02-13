@@ -12,4 +12,7 @@ import com.qudgns200.study6.model.User_Date;
 public interface DateMapper {
 	
 	public ArrayList<User_Date> getDate(String id);
+	public int putDate(User_Date user_date);
+	public int updateDate(User_Date user_date);
+	public int deleteDate(User_Date user_date);
 }
