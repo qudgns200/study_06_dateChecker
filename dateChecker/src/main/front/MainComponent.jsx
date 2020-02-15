@@ -51,9 +51,12 @@ class MainComponent extends React.Component {
 
     const ddayList = this.state.dday.map(one => {
       return (
+        <div>
         <Button variant="contained" fullWidth className={classes.listData}>
           <h1>From D-day : {one}</h1>
         </Button>
+        <Button>Delete</Button>
+        </div>
       );
     })
 

@@ -56058,11 +56058,11 @@ function (_React$Component) {
     value: function render() {
       var classes = this.props.classes;
       var ddayList = this.state.dday.map(function (one) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
           variant: "contained",
           fullWidth: true,
           className: classes.listData
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "From D-day : ", one));
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "From D-day : ", one)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__["default"], null, "Delete"));
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_3__["default"], {
         maxWidth: "xs"
