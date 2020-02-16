@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import AddCircleTwoToneIcon from '@material-ui/icons/AddCircleTwoTone';
+import DeleteIcon from '@material-ui/icons/Delete';
+import UpdateIcon from '@material-ui/icons/Update';
 
 const useStyles = theme => ({
   listDiv: {
@@ -37,8 +39,20 @@ class MainComponent extends React.Component {
 
     axios.get('/getDateInfo')
       .then(res => {
-        console.log("data: " + res.data);
-        this.setState({ dday: res.data });
+        const arrayList = [];
+        res.data.forEach(el => {
+          arrayList.push({
+            dDay: el.dDay,
+            inputDate: el.inputDate
+          });
+        });
+
+        this.setState({
+          dday: arrayList
+        })
+      })
+      .catch(error => {
+        console.log(error);
       });
   }
 
@@ -49,13 +63,14 @@ class MainComponent extends React.Component {
   render() {
     const { classes } = this.props;
 
-    const ddayList = this.state.dday.map(one => {
+    const ddayList = this.state.dday.map((el, content) => {
       return (
         <div>
-        <Button variant="contained" fullWidth className={classes.listData}>
-          <h1>From D-day : {one}</h1>
-        </Button>
-        <Button>Delete</Button>
+          <Button variant="contained" fullWidth className={classes.listData}>
+            <h1>{el.inputDate} : {el.dDay}</h1>
+            <Button><UpdateIcon /></Button>
+            <Button><DeleteIcon /></Button>
+          </Button>
         </div>
       );
     })
@@ -66,18 +81,18 @@ class MainComponent extends React.Component {
           <div className={classes.listDiv}>
             <h3><center>{this.state.id} 의 D-Day</center></h3>
           </div>
-            {ddayList}
+          {ddayList}
         </div>
 
         <div className={classes.buttonDiv}>
           <h1>
-            <Button 
+            <Button
               fullWidth
               component="button"
               variant="contained"
               color="primary"
               onClick={this.moveDatePicker}
-              >
+            >
               <AddCircleTwoToneIcon />
             </Button>
           </h1>

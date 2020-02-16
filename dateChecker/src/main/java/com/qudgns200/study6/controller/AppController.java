@@ -1,6 +1,7 @@
 package com.qudgns200.study6.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -66,12 +67,11 @@ public class AppController{
 	}
 	
 	@RequestMapping("/getDateInfo")
-	public @ResponseBody ArrayList<Long> getDateInfo(HttpServletRequest req) {
+	public @ResponseBody ArrayList<HashMap<String, String>> getDateInfo(HttpServletRequest req) {
 		session = req.getSession(); // Get Session
 		String currentID = (String)session.getAttribute("ID");
 		
-		ArrayList<Long> arr = dService.getDateInfo(currentID);
-		
+		ArrayList<HashMap<String, String>> arr = dService.getDateInfo(currentID);
 		return arr;
 	}
 	

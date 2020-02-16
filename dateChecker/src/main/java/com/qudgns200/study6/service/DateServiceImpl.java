@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
+import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,7 +19,7 @@ public class DateServiceImpl implements DateService {
 	private DateMapper mapper;
 
 	@Override
-	public ArrayList<Long> getDateInfo(String id) {
+	public ArrayList<HashMap<String, String>> getDateInfo(String id) {
 		// TODO Auto-generated method stub
 		
 		Calendar today = Calendar.getInstance(); // Get Today
@@ -28,12 +28,23 @@ public class DateServiceImpl implements DateService {
 		long tday = today.getTimeInMillis()/(24*60*60*1000);
 		
 		ArrayList<User_Date> arr = mapper.getDate(id); // Days Which User entered
-		ArrayList<Long> diff = new ArrayList<Long>(); // For return Values
+		ArrayList<HashMap<String, String>> diff = new ArrayList<HashMap<String, String>>(); // For return Values
+		HashMap<String, String> map = new HashMap<String, String>();
+		
+		// Date to String
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		
 		for(int i=0; i<arr.size(); i++) {
+			// Calculate D-Day
 			dDay.set(arr.get(i).getInput_date().getYear()+1900, arr.get(i).getInput_date().getMonth()+1, arr.get(i).getInput_date().getDay()-20);
-			diff.add(tday-(dDay.getTimeInMillis()/(24*60*60*1000)));
+			
+			map.put("dDay",Long.toString(tday-(dDay.getTimeInMillis()/(24*60*60*1000))));
+			map.put("inputDate", sdf.format(arr.get(i).getInput_date()));
+			
+			diff.add(map);	
 		}
+		
+		System.out.println(diff.toString());
 		
 		return diff;
 	}
