@@ -29,12 +29,13 @@ public class DateServiceImpl implements DateService {
 		
 		ArrayList<User_Date> arr = mapper.getDate(id); // Days Which User entered
 		ArrayList<HashMap<String, String>> diff = new ArrayList<HashMap<String, String>>(); // For return Values
-		HashMap<String, String> map = new HashMap<String, String>();
+		
 		
 		// Date to String
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		
 		for(int i=0; i<arr.size(); i++) {
+			HashMap<String, String> map = new HashMap<String, String>();
 			// Calculate D-Day
 			dDay.set(arr.get(i).getInput_date().getYear()+1900, arr.get(i).getInput_date().getMonth()+1, arr.get(i).getInput_date().getDay()-20);
 			
@@ -42,10 +43,7 @@ public class DateServiceImpl implements DateService {
 			map.put("inputDate", sdf.format(arr.get(i).getInput_date()));
 			
 			diff.add(map);	
-		}
-		
-		System.out.println(diff.toString());
-		
+		}		
 		return diff;
 	}
 
