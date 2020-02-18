@@ -55971,8 +55971,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_AddCircleTwoTone__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_AddCircleTwoTone__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _material_ui_icons_Delete__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(632);
 /* harmony import */ var _material_ui_icons_Delete__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Delete__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _material_ui_icons_Update__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(633);
-/* harmony import */ var _material_ui_icons_Update__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Update__WEBPACK_IMPORTED_MODULE_7__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -55993,7 +55991,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
  // Add for Ajax
-
 
 
 
@@ -56029,10 +56026,12 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(MainComponent).call(this, props));
     _this.state = {
+      no: "",
       id: "",
       dday: []
     };
     _this.moveDatePicker = _this.moveDatePicker.bind(_assertThisInitialized(_this));
+    _this.deleteDate = _this.deleteDate.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -56050,6 +56049,7 @@ function (_React$Component) {
         var arrayList = [];
         res.data.forEach(function (el) {
           arrayList.push({
+            no: el.no,
             dDay: el.dDay,
             inputDate: el.inputDate
           });
@@ -56068,15 +56068,36 @@ function (_React$Component) {
       document.location.href = "/DatePicker";
     }
   }, {
+    key: "deleteDate",
+    value: function deleteDate(no) {
+      console.log("e : " + no);
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/deleteDate', {
+        params: {
+          no: no,
+          id: this.state.id
+        }
+      }).then(function (res) {
+        if (res.data == true) {
+          document.location.href = "/Main";
+        }
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
       var classes = this.props.classes;
       var ddayList = this.state.dday.map(function (el, content) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
           variant: "contained",
           fullWidth: true,
           className: classes.listData
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, el.inputDate, " : ", el.dDay), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Update__WEBPACK_IMPORTED_MODULE_7___default.a, null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Delete__WEBPACK_IMPORTED_MODULE_6___default.a, null))));
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "input Date : ", el.inputDate), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "     =>     "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, el.dDay), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          onClick: function onClick() {
+            return _this3.deleteDate(el.no);
+          }
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Delete__WEBPACK_IMPORTED_MODULE_6___default.a, null))));
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_3__["default"], {
         maxWidth: "xs"
@@ -56147,30 +56168,6 @@ var _createSvgIcon = _interopRequireDefault(__webpack_require__(580));
 var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
   d: "M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
 }), 'Delete');
-
-exports.default = _default;
-
-/***/ }),
-/* 633 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(579);
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(__webpack_require__(334));
-
-var _createSvgIcon = _interopRequireDefault(__webpack_require__(580));
-
-var _default = (0, _createSvgIcon.default)(_react.default.createElement("path", {
-  d: "M21 10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-.1-2.73 2.71-2.73 7.08 0 9.79s7.15 2.71 9.88 0C18.32 15.65 19 14.08 19 12.1h2c0 1.98-.88 4.55-2.64 6.29-3.51 3.48-9.21 3.48-12.72 0-3.5-3.47-3.53-9.11-.02-12.58s9.14-3.47 12.65 0L21 3v7.12zM12.5 8v4.25l3.5 2.08-.72 1.21L11 13V8h1.5z"
-}), 'Update');
 
 exports.default = _default;
 

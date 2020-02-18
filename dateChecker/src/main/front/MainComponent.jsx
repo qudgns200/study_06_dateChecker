@@ -5,7 +5,6 @@ import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import AddCircleTwoToneIcon from '@material-ui/icons/AddCircleTwoTone';
 import DeleteIcon from '@material-ui/icons/Delete';
-import UpdateIcon from '@material-ui/icons/Update';
 
 const useStyles = theme => ({
   listDiv: {
@@ -25,10 +24,12 @@ class MainComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      no: "",
       id: "",
       dday: []
     }
     this.moveDatePicker = this.moveDatePicker.bind(this);
+    this.deleteDate = this.deleteDate.bind(this);
   }
 
   componentDidMount() {
@@ -42,6 +43,7 @@ class MainComponent extends React.Component {
         const arrayList = [];
         res.data.forEach(el => {
           arrayList.push({
+            no: el.no,
             dDay: el.dDay,
             inputDate: el.inputDate
           });
@@ -60,6 +62,20 @@ class MainComponent extends React.Component {
     document.location.href = "/DatePicker";
   }
 
+  deleteDate(no) {
+    console.log("e : " + no);
+    axios.get('/deleteDate', {
+      params: {
+        no: no,
+        id: this.state.id
+      }
+    }).then(res => {
+      if (res.data == true) { 
+        document.location.href = "/Main"; 
+      }
+    });
+  }
+
   render() {
     const { classes } = this.props;
 
@@ -67,9 +83,12 @@ class MainComponent extends React.Component {
       return (
         <div>
           <Button variant="contained" fullWidth className={classes.listData}>
-            <h1>{el.inputDate} : {el.dDay}</h1>
-            <Button><UpdateIcon /></Button>
-            <Button><DeleteIcon /></Button>
+            <h3>input Date : {el.inputDate}</h3>
+            <h1>     =>     </h1>
+            <h1>{el.dDay}</h1>
+            <Button onClick={()=>this.deleteDate(el.no)}>
+              <DeleteIcon />
+            </Button>
           </Button>
         </div>
       );

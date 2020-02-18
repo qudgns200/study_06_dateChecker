@@ -38,7 +38,7 @@ public class DateServiceImpl implements DateService {
 			HashMap<String, String> map = new HashMap<String, String>();
 			// Calculate D-Day
 			dDay.set(arr.get(i).getInput_date().getYear()+1900, arr.get(i).getInput_date().getMonth()+1, arr.get(i).getInput_date().getDay()-20);
-			
+			map.put("no", String.valueOf(arr.get(i).getNo()));
 			map.put("dDay",Long.toString(tday-(dDay.getTimeInMillis()/(24*60*60*1000))));
 			map.put("inputDate", sdf.format(arr.get(i).getInput_date()));
 			

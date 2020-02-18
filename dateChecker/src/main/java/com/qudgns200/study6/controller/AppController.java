@@ -82,4 +82,12 @@ public class AppController{
 		user_date.setId(id);
 		return dService.putDate(user_date) == true ? true : false;
 	}
+	
+	@RequestMapping(value = "/deleteDate", method = RequestMethod.GET)
+	public @ResponseBody boolean inputDate(String no, String id) {		
+		User_Date user_date = new User_Date();
+		user_date.setNo(Integer.parseInt(no));
+		user_date.setId(id);
+		return dService.delDate(user_date) == true ? true : false;
+	}
 }
