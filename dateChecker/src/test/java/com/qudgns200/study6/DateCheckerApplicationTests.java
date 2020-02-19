@@ -1,25 +1,24 @@
 package com.qudgns200.study6;
 
-import java.util.Date;
-import java.util.Calendar;
-import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import com.qudgns200.study6.model.User_Date;
-import com.qudgns200.study6.service.UserServiceImpl;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest
+//import java.util.Calendar;
+//import org.junit.jupiter.api.Test;
+//import org.junit.runner.RunWith;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.boot.test.context.SpringBootTest;
+//import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+//import com.qudgns200.study6.service.UserServiceImpl;
+
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@SpringBootTest
 //@ContextConfiguration(locations = {"classpath:application.properties"})
 class DateCheckerApplicationTests {
 
 //	@Autowired
 //	private UserMapper userMapper;
 
-	@Autowired
-	private UserServiceImpl userService;
+//	@Autowired
+//	private UserServiceImpl userService;
 
 //	@Inject
 //	private DataSource ds;
@@ -62,21 +61,21 @@ class DateCheckerApplicationTests {
 //		}
 //	}
 
-	@Test
-	void dateChecker() {
-		
-		Calendar today = Calendar.getInstance();
-		Calendar dday = Calendar.getInstance();
-		
-		dday.set(2020, 2, 9);
-		
-		long day = dday.getTimeInMillis()/(24*60*60*1000);
-		
-		long tday = today.getTimeInMillis()/(24*60*60*1000);
-		
-		long count = tday - day;
-		
-		System.out.println(count);
-	}
+//	@Test
+//	void dateChecker() {
+//		
+//		Calendar today = Calendar.getInstance();
+//		Calendar dday = Calendar.getInstance();
+//		
+//		dday.set(2020, 2, 9);
+//		
+//		long day = dday.getTimeInMillis()/(24*60*60*1000);
+//		
+//		long tday = today.getTimeInMillis()/(24*60*60*1000);
+//		
+//		long count = tday - day;
+//		
+//		System.out.println(count);
+//	}
 
 }
