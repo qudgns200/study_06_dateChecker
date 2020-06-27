@@ -1,6 +1,4 @@
 import React from 'react';
-import DateFnsUtils from '@date-io/date-fns'; // choose your lib
-import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
@@ -8,6 +6,8 @@ import axios from 'axios'; // Add for Ajax
 import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
+import  DateFnsUtils  from '@date-io/date-fns'; // choose your lib
+import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
 
 const useStyles = theme => ({
   paper: {
